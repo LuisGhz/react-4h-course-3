@@ -1,7 +1,16 @@
+import { NameContext } from 'App';
+
 
 const  ComponentC = () => {
   return (
-    <p>ComponentC</p>
+    <div>
+      <p>ComponentC</p>
+      <NameContext.Consumer>
+        { name => {
+          return <p>{ name }</p>
+        }}
+      </NameContext.Consumer>
+    </div>
   );
 }
 
