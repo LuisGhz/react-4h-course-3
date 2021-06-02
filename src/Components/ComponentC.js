@@ -1,5 +1,5 @@
 
-function ComponentC() {
+const  ComponentC = () => {
   return (
     <p>ComponentC</p>
   );
