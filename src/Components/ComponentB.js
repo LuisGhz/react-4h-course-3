@@ -1,7 +1,11 @@
+import ComponentC from './ComponentC';
 
 const  ComponentB = () => {
   return (
-    <p>ComponentB</p>
+    <div>
+      <p>ComponentB</p>
+      <ComponentC />
+    </div>
   );
 }
 
