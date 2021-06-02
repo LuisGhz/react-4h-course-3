@@ -7,7 +7,9 @@ export const NameContext = React.createContext();
 function App() {
   return (
     <div className="App">
-      <ComponentA />
+      <NameContext.Provider value={ 'Smith' }>
+        <ComponentA />
+      </NameContext.Provider>
     </div>
   );
 }
