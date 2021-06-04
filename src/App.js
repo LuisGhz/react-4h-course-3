@@ -2,17 +2,17 @@ import React from 'react';
 import './App.css';
 import ComponentA from 'Components/ComponentA';
 
-export const NameContext = React.createContext();
+export const UserContext = React.createContext();
 export const ColorContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <NameContext.Provider value={ 'Smith' }>
+      <UserContext.Provider value={ 'Smith' }>
         <ColorContext.Provider value={ 'red' }>
           <ComponentA />
         </ColorContext.Provider>
-      </NameContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }

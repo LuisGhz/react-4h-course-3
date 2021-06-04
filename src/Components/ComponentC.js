@@ -1,11 +1,11 @@
-import { NameContext, ColorContext } from 'App';
+import { UserContext, ColorContext } from 'App';
 
 
 const  ComponentC = () => {
   return (
     <div>
       <p>ComponentC</p>
-      <NameContext.Consumer>
+      <UserContext.Consumer>
         { name => {
           return (
             <ColorContext.Consumer>
@@ -15,7 +15,7 @@ const  ComponentC = () => {
             </ColorContext.Consumer>
           )
         }}
-      </NameContext.Consumer>
+      </UserContext.Consumer>
     </div>
   );
 }
