@@ -1,4 +1,4 @@
-import { NameContext } from 'App';
+import { NameContext, ColorContext } from 'App';
 
 
 const  ComponentC = () => {
@@ -7,7 +7,13 @@ const  ComponentC = () => {
       <p>ComponentC</p>
       <NameContext.Consumer>
         { name => {
-          return <p>{ name }</p>
+          return (
+            <ColorContext.Consumer>
+              { color => (
+                <div>name: { name } color: { color }</div>
+              )}
+            </ColorContext.Consumer>
+          )
         }}
       </NameContext.Consumer>
     </div>
